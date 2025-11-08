@@ -15,7 +15,7 @@ const QuranAdminLogin = ({ onLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/Dashboard")
+    navigate("/surah")
     setError('');
     setIsLoading(true);
 
@@ -34,7 +34,7 @@ const QuranAdminLogin = ({ onLogin }) => {
     setTimeout(() => {
       if (email === 'admin@quran.com' && password === 'admin123') {
         toast.success('Login successful');
-        navigate('/Dashboard');
+        navigate('/surah');
       } else {
         setError('Invalid email or password. Please try again.');
       }
