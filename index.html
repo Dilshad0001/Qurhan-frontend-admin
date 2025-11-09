@@ -1,37 +1,27 @@
 <!doctype html>
 <html lang="en">
-  <!-- <head>
+  <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quran-Admin</title>
     <meta name="description" content="Quran Management System for administrators" />
-    <meta name="theme-color" content="#059669" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="/vite.svg" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- ✅ Correct PWA links -->
+    <link rel="icon" type="image/png" href="/pwa-192x192.png" />
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Quran Admin" />
-  </head> -->
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quran-Admin</title>
-  <meta name="description" content="Quran Management System for administrators" />
-  <meta name="theme-color" content="#ffffff" />
 
-  <!-- ✅ Correct PWA links -->
-  <link rel="icon" type="image/png" href="/pwa-192x192.png" />
-  <link rel="apple-touch-icon" href="/pwa-192x192.png" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="Quran Admin" />
-</head>
+    <!-- ✅ Only these two scripts -->
+    <script type="module" src="/@vite/client"></script>
+    <script type="module" src="/src/main.jsx"></script>
+  </head>
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
