@@ -50,13 +50,28 @@ export const getSurahById = async (id) => {
 };
 
 // ✅ Create new Surah
+// export const addSurah = async (surahData) => {
+//   try {
+//     const response = await axios.post(`${BASE_URL}/adminuser/surah/`, {
+//       surah_number: surahData.surah_number,
+//       surah_name_arabic: surahData.arabic,
+//       surah_name_malayalam: surahData.malayalam,
+//       surah_name_english: surahData.english,
+//     });
+//     return response.data;
+//   } catch (error) {
+//     console.error("❌ Failed to create Surah:", error.response?.data || error);
+//     throw error;
+//   }
+// };
+
 export const addSurah = async (surahData) => {
   try {
     const response = await axios.post(`${BASE_URL}/adminuser/surah/`, {
       surah_number: surahData.surah_number,
-      surah_name_arabic: surahData.arabic,
-      surah_name_malayalam: surahData.malayalam,
-      surah_name_english: surahData.english,
+      surah_name_arabic: surahData.surah_name_arabic,
+      surah_name_malayalam: surahData.surah_name_malayalam,
+      surah_name_english: surahData.surah_name_english,
     });
     return response.data;
   } catch (error) {
@@ -64,6 +79,7 @@ export const addSurah = async (surahData) => {
     throw error;
   }
 };
+
 
 // ✅ Update Surah (PATCH)
 export const updateSurah = async (id, updatedData) => {
