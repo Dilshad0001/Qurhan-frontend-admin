@@ -13,12 +13,10 @@ function App() {
     <>
       <Routes>
          <Route path='/' element={<Login/>}/>
-         {/* <Route path='/Dashboard' element={<SurahManagementModal/>}/> */}
          <Route path='/surah' element={<SurahListPage/>}/>
           <Route path="/surah/:id" element={<SurahDetailPage />} />
           <Route path="/add" element={<AddSurahModal />} />
           <Route path="/ayat/:ayatId" element={<AyatDetailPage />} />
-          {/* <Route path="/ayat/:ayatId" element={<AyatDetailPage />} /> */}
       </Routes>
       <ToastContainer />
     </>

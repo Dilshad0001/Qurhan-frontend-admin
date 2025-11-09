@@ -1,17 +1,3 @@
-// import axios from "axios";
-
-// const BASE_URL = "https://qura-an-backend-tbdt.onrender.com"; // your backend URL
-
-// // ✅ Function to fetch ayats dynamically by surah_id
-// export const getAyatsBySurah = async (surahId) => {
-//   try {
-//     const response = await axios.get(`${BASE_URL}/user/ayat/?surah_id=${surahId}`);
-//     return response.data; // returns ayats array
-//   } catch (error) {
-//     console.error("❌ Failed to fetch Ayats:", error);
-//     return [];
-//   }
-// };
 
 
 
@@ -49,21 +35,6 @@ export const getSurahById = async (id) => {
   }
 };
 
-// ✅ Create new Surah
-// export const addSurah = async (surahData) => {
-//   try {
-//     const response = await axios.post(`${BASE_URL}/adminuser/surah/`, {
-//       surah_number: surahData.surah_number,
-//       surah_name_arabic: surahData.arabic,
-//       surah_name_malayalam: surahData.malayalam,
-//       surah_name_english: surahData.english,
-//     });
-//     return response.data;
-//   } catch (error) {
-//     console.error("❌ Failed to create Surah:", error.response?.data || error);
-//     throw error;
-//   }
-// };
 
 export const addSurah = async (surahData) => {
   try {
@@ -108,54 +79,18 @@ export const deleteSurah = async (id) => {
 // ============================
 
 // ✅ Get all ayats by Surah ID
-// export const getAyatsBySurah = async (surahId) => {
-//   try {
-//     const response = await axios.get(`${BASE_URL}/user/ayat/`, {
-//       params: { surah_id: surahId },
-//     });
-//     return response.data; // returns ayats array
-//   } catch (error) {
-//     console.error("❌ Failed to fetch Ayats:", error);
-//     return [];
-//   }
-// };
 
 
 
-// export const getAyatsBySurah = async (surahId) => {
-//   try {
-//     const response = await axios.get(`${BASE_URL}/adminuser/ayat/`, {
-//       params: { surah_id: surahId },
-//     });
-//     return response.data;
-//   } catch (error) {
-//     console.error("❌ Failed to fetch ayats:", error);
-//     return [];
-//   }
-// };
 
-// ✅ Update ayat meaning
-// export const updateAyatMeaning = async (ayatId, meaningText) => {
-//   try {
-//     const response = await axios.patch(`${BASE_URL}/adminuser/ayat/${ayatId}/`, {
-//       meaning_text: meaningText,
-//     });
-//     return response.data;
-//   } catch (error) {
-//     console.error("❌ Failed to update ayat meaning:", error.response?.data || error);
-//     throw error;
-//   }
-// };
+
+
 export const updateAyatMeaning = async (ayatId, data) => {
   return axios.patch(`${BASE_URL}/adminuser/ayat/${ayatId}/`, data);
 };
 
 
 
-// src/data/ayatsData.js
-// import axios from "axios";
-
-// const BASE_URL = "https://qura-an-backend-tbdt.onrender.com";
 
 // ============================
 // 📜 AYAT API FUNCTIONS
@@ -188,18 +123,7 @@ export const getAyatById = async (ayatId) => {
   }
 };
 
-// ✅ Update Ayat meaning (PATCH)
-// export const updateAyatMeaning = async (ayatId, meaningText) => {
-//   try {
-//     const response = await axios.patch(`${BASE_URL}/adminuser/ayat/${ayatId}/`, {
-//       meaning_text: meaningText,
-//     });
-//     return response.data; // returns updated ayat
-//   } catch (error) {
-//     console.error("❌ Failed to update Ayat meaning:", error.response?.data || error);
-//     throw error;
-//   }
-// };
+
 
 // ✅ Optional: Create new Ayat (if you ever add)
 export const addAyat = async (ayatData) => {

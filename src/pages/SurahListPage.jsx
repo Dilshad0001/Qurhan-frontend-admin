@@ -189,12 +189,7 @@ function SurahListPage() {
       {showAdd && (
         <div className="absolute inset-0 flex justify-center items-center z-50 bg-black/40 backdrop-blur-sm">
           <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-md">
-            {/* <AddSurahModal
-              // onClose={() => setShowAdd(false)}
-              onClose={() => setShowAddAyat(false)}
-              onSave={handleAddSurah}
-              isEdit={false}
-            /> */}
+
             <AddSurahModal
   onClose={() => setShowAdd(false)}
   onSave={handleAddSurah}
@@ -203,13 +198,7 @@ function SurahListPage() {
   }
 />
 
-            {/* <AddSurahModal
-  onClose={() => setShowAdd(false)}
-  onSave={handleAddSurah}
-  lastSurahNumber={
-    surahs.length > 0 ? surahs[surahs.length - 1].surah_number : 0
-  }
-/> */}
+
 
           </div>
         </div>
@@ -219,19 +208,6 @@ function SurahListPage() {
       {showEdit && (
         <div className="absolute inset-0 flex justify-center items-center z-50 bg-black/40 backdrop-blur-sm">
           <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-md">
-            {/* <AddSurahModal
-              onClose={() => setShowEdit(false)}
-              onSave={handleUpdateSurah}
-              initialData={editingSurah}
-              isEdit={true}
-            /> */}
-            {/* <AddSurahModal
-  onClose={() => setShowAdd(false)}
-  onSave={handleAddSurah}
-  lastSurahNumber={
-    surahs.length > 0 ? surahs[surahs.length - 1].surah_number : 0
-  }
-/> */}
 
 <AddSurahModal
   onClose={() => setShowAdd(false)}
