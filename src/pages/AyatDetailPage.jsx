@@ -293,7 +293,7 @@ const handleTextSelection = async () => {
                 <button
                   onClick={handleSave}
                   disabled={saving}
-                  className="text-green-700 hover:text-green-800 transition"
+                  className="text-green-700 hover:text-green-800 transition px-60"
                 >
                   <Save size={22} />
                 </button>

@@ -119,16 +119,19 @@ export const deleteSurah = async (id) => {
 // };
 
 // ✅ Update ayat meaning
-export const updateAyatMeaning = async (ayatId, meaningText) => {
-  try {
-    const response = await axios.patch(`${BASE_URL}/adminuser/ayat/${ayatId}/`, {
-      meaning_text: meaningText,
-    });
-    return response.data;
-  } catch (error) {
-    console.error("❌ Failed to update ayat meaning:", error.response?.data || error);
-    throw error;
-  }
+// export const updateAyatMeaning = async (ayatId, meaningText) => {
+//   try {
+//     const response = await axios.patch(`${BASE_URL}/adminuser/ayat/${ayatId}/`, {
+//       meaning_text: meaningText,
+//     });
+//     return response.data;
+//   } catch (error) {
+//     console.error("❌ Failed to update ayat meaning:", error.response?.data || error);
+//     throw error;
+//   }
+// };
+export const updateAyatMeaning = async (ayatId, data) => {
+  return axios.patch(`${BASE_URL}/adminuser/ayat/${ayatId}/`, data);
 };
 
 

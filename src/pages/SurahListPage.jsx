@@ -325,7 +325,7 @@ function SurahListPage() {
 
   // 🟢 Long Press handlers (works on mobile + desktop)
   const handleLongPressStart = (e, surah) => {
-    e.preventDefault();
+    // e.preventDefault();
     longPressTimer.current = setTimeout(() => setLongPressedSurah(surah), 600);
   };
   const handleLongPressEnd = () => clearTimeout(longPressTimer.current);
@@ -402,7 +402,7 @@ function SurahListPage() {
         </div>
 
         {/* 📜 Surah List */}
-        <div className="space-y-1">
+        <div className="space-y-1 ">
           {filteredSurahs.map((s) => (
             <div
               key={s.id}
@@ -412,15 +412,15 @@ function SurahListPage() {
               onTouchEnd={handleLongPressEnd}
               onMouseDown={(e) => handleLongPressStart(e, s)}
               onMouseUp={handleLongPressEnd}
-              className="relative h-16 rounded-3xl p-6 shadow-md hover:shadow-xl border border-teal-100 hover:border-teal-300 bg-white/60 backdrop-blur cursor-pointer transition"
+              className="relative  h-16 rounded-3xl p-6 shadow-md hover:shadow-xl border border-teal-100 hover:border-teal-300 bg-white/60 backdrop-blur cursor-pointer transition"
             >
               {/* Normal card */}
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center  -mt-3 ">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-gray-200 rounded-2xl flex items-center justify-center font-semibold shadow">
                     {s.surah_number}
                   </div>
-                  <p className="text-teal-800 text-sm">{s.surah_name_malayalam}</p>
+                  <p className="text-gray-900 text-sm">{s.surah_name_malayalam}</p>
                 </div>
                 <h2
                   className="text-2xl text-gray-700"
@@ -471,7 +471,8 @@ function SurahListPage() {
         <div className="absolute inset-0 flex justify-center items-center z-50 bg-black/40 backdrop-blur-sm">
           <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-md">
             <AddSurahModal
-              onClose={() => setShowAdd(false)}
+              // onClose={() => setShowAdd(false)}
+              onClose={() => setShowAddAyat(false)}
               onSave={handleAddSurah}
               isEdit={false}
             />
