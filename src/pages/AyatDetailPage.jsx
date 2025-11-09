@@ -213,14 +213,16 @@ const handleTextSelection = async () => {
       <div className="max-w-3xl mx-auto px-4 py-8">
         <div className="border border-amber-900 rounded-2xl bg-white shadow-sm p-6">
 
-          <p
+<p
   dir="rtl"
   className="text-3xl text-amber-900 text-right cursor-text select-text"
   style={{ fontFamily: "Amiri, serif", lineHeight: "2.5rem" }}
   onMouseUp={handleTextSelection}
+  onTouchEnd={handleTextSelection} // ✅ works for phone/tablet
 >
   {ayat.ayat_number}] {ayat.ayat_text}
 </p>
+
 
 
           <hr className="border-t border-gray-900 my-4" />
