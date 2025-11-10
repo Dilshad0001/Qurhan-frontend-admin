@@ -15,6 +15,7 @@ export const getSurahs = async () => {
       english: s.surah_name_english,
       totalAyats: s.totalAyats || 0, // fallback if not included in API
     }));
+    
   } catch (error) {
     console.error("❌ Failed to fetch Surahs:", error);
     return [];
