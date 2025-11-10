@@ -36,6 +36,7 @@ export const getSurahById = async (id) => {
 };
 
 
+
 export const addSurah = async (surahData) => {
   try {
     const response = await axios.post(`${BASE_URL}/adminuser/surah/`, {
